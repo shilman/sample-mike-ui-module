@@ -1,13 +1,9 @@
 import * as React from 'react';
-import { describe } from '../../common/storybook';
+import { storiesOf } from '@storybook/react';
 import { Foo } from './Foo';
 
 
-describe('primitives', {
-  title: 'Sample component',
-  width: 350,
-  background: 'rgba(255, 0, 0, 0.1)', /* RED */
-})
+storiesOf('primitives', module)
   .add('Foo', () => {
     return (
       <Foo />

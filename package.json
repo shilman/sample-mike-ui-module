@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
-    "ui": "./node_modules/@kadira/storybook/dist/server/index.js -p 3030 -c ./.storybook -s ./assets",
+    "ui": "./node_modules/@storybook/react/dist/server/index.js -p 3030 -c ./.storybook -s ./assets",
     "start": "node .",
     "watch": "nodemon . -e js --ignore src",
     "test": "sh sh/test.sh",
@@ -16,26 +16,24 @@
     "prepublish": "yarn run lint && yarn test && yarn run build"
   },
   "dependencies": {
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
     "mobx": "^3.1.7",
-    "mobx-react": "^4.1.3"
+    "mobx-react": "^4.1.3",
+    "react": "15.4.2",
+    "react-dom": "15.4.2"
   },
   "devDependencies": {
+    "@storybook/react": "3.0.0",
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.38",
     "@types/node": "^7.0.5",
+    "@types/react": "^15.0.4",
+    "@types/react-dom": "^0.14.21",
     "chai": "3.5.0",
     "mocha": "3.2.0",
     "ts-node": "^2.1.0",
-    "tslint": "4.4.2",
+    "tslint": "5.4.0",
     "tslint-react": "^2.4.0",
-    "typescript": "^2.2.1",
-    "@kadira/storybook": "^2.35.3",
-    "@kadira/storybook-addon-knobs": "^1.7.1",
-    "@types/react": "^15.0.4",
-    "@types/react-dom": "^0.14.21",
-    "storybook-host": "^1.0.14"
+    "typescript": "^2.2.1"
   },
   "repository": {
     "type": "git",
